@@ -1,4 +1,3 @@
-import NavigationBar from '../components/header/NavigationBar';
 import Recipe from '../components/header/UI/Recipe';
 import ScreenContainer from '../components/header/UI/ScreenContainer';
 

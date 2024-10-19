@@ -12,8 +12,8 @@ function Recipe() {
 				className='w-full h-72 object-cover rounded-t-2xl'
 			/>
 			<div className='p-5 flex flex-col gap-3 break-all '>
-				<h3 className='text-sm font-semibold text-dark-clr'>
-					Mala modogu
+				<h3 className='font-bold text-dark-clr leading-snug'>
+					Mala modogu and rices and rice and rice and more rice
 				</h3>
 				<div className='flex justify-between'>
 					<div className='flex items-center gap-2'>

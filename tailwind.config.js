@@ -12,13 +12,14 @@ module.exports = {
 			fontFamily: {
 				charmonman: ['Charmonman', 'cursive'],
 			},
-		},
-		colors: {
-			'bg-clr': '#f9f9f9',
-			'border-clr': '#e8e8e8',
-			'text-light': '#7f7f7f',
-			'accent-clr': '#ff642f',
-			'accent-clr-light': '#ffd7c9',
+			colors: {
+				'bg-clr': '#f9f9f9',
+				'border-clr': '#e8e8e8',
+				'text-light': '#7f7f7f',
+				'accent-clr': '#ff642f',
+				'accent-clr-light': '#ffd7c9',
+				'dark-clr': '#180b06',
+			},
 		},
 	},
 	plugins: [],

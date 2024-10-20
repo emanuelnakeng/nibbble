@@ -5,7 +5,7 @@ import { categories } from '../utils/data';
 function Categories() {
 	return (
 		<ScreenContainer>
-			<section className='container mx-auto pt-5 w-full px-5'>
+			<section className='container mx-auto pt-5 w-full'>
 				<h2 className='font-bold text-2xl md:tex-3xl text-dark-clr'>
 					Categories
 				</h2>

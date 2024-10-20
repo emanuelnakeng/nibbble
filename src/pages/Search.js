@@ -1,5 +1,5 @@
-import Recipe from '../components/header/UI/Recipe';
-import ScreenContainer from '../components/header/UI/ScreenContainer';
+import Recipe from '../components/ui/Recipe';
+import ScreenContainer from '../components/common/ScreenContainer';
 
 function Search() {
 	return (

@@ -4,7 +4,7 @@ import Favorites from './pages/Favorites';
 import Recipe from './pages/Recipe';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
-import Categories from './pages/Categories';
+import Tips from './pages/Tips';
 
 function App() {
 	return (
@@ -14,7 +14,7 @@ function App() {
 				<Route exact path='/search' element={<Search />} />
 				<Route path='/favorites' element={<Favorites />} />
 				<Route path='/recipe/:id' element={<Recipe />} />
-				<Route path='/categories' element={<Categories />} />
+				<Route path='/tips' element={<Tips />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>

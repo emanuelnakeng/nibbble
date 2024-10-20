@@ -1,4 +1,4 @@
-import ScreenContainer from '../components/header/UI/ScreenContainer';
+import ScreenContainer from '../components/common/ScreenContainer';
 
 function Favorites() {
 	return (

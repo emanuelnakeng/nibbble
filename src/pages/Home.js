@@ -30,7 +30,7 @@ function Home() {
 	return (
 		<ScreenContainer>
 			<section
-				className={`w-full h-[50vh] container mx-auto rounded-3xl bg-cover bg-center bg-no-repeat mb-15`}
+				className={`w-full h-[60vh] container mx-auto rounded-3xl bg-cover bg-center bg-no-repeat mb-15`}
 				style={{ backgroundImage: `url(${heroImages[index].image})` }}
 			>
 				<div className='w-full h-full bg-dark-clr/50 rounded-3xl flex flex-col justify-end duration-300 ease-in-out'>

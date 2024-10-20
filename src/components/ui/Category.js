@@ -1,6 +1,6 @@
 function Category({ image, catName }) {
 	return (
-		<article className='flex flex-col items-center gap-5'>
+		<article className='flex flex-col items-center gap-5 rounded-full'>
 			<img
 				src={image}
 				alt={catName}

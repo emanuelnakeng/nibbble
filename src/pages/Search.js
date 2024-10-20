@@ -5,7 +5,7 @@ function Search() {
 	return (
 		<ScreenContainer>
 			<section
-				className={`h-[30vh] w-full container mx-auto rounded-3xl bg-[#FF9A78] bg-bottom bg-contain md:bg-cover md:h-[40vh] bg-no-repeat mb-15`}
+				className={`h-[40vh] w-full container mx-auto rounded-3xl bg-[#FF9A78] bg-bottom bg-contain md:bg-cover md:h-[40vh] bg-no-repeat mb-15`}
 				style={{
 					backgroundImage: `url(${background})`,
 				}}
@@ -20,7 +20,7 @@ function Search() {
 						</p>
 					</div>
 					<div className='flex flex-col items-center'>
-						<form className='w-full md:w-2/4 px-5 md:px-0'>
+						<form className='w-full md:w-2/4 px-2 md:px-0'>
 							<div className='relative'>
 								<div className='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
 									<svg

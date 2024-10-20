@@ -30,7 +30,7 @@ function Home() {
 	return (
 		<ScreenContainer>
 			<section
-				className={`w-full h-[28rem] container mx-auto rounded-3xl bg-cover bg-center bg-no-repeat mb-15`}
+				className={`w-full h-[50vh] container mx-auto rounded-3xl bg-cover bg-center bg-no-repeat mb-15`}
 				style={{ backgroundImage: `url(${heroImages[index].image})` }}
 			>
 				<div className='w-full h-full bg-dark-clr/50 rounded-3xl flex flex-col justify-end duration-300 ease-in-out'>
@@ -41,7 +41,7 @@ function Home() {
 						<div className='inline-flex items-center z-10 gap-2'>
 							<HiOutlineArrowTrendingUp size={20} color='#fff' />
 							<h3 className='text-base text-white'>
-								Discover, Cook and Enjoy: Curated recipes
+								Discover, Cook and Enjoy: Curated cuisines
 							</h3>
 						</div>
 					</div>
@@ -49,7 +49,7 @@ function Home() {
 			</section>
 			<section className='container mx-auto pt-12 w-full'>
 				<h2 className='font-bold text-2xl md:tex-3xl text-dark-clr'>
-					Trending Categories
+					Popular Categories
 				</h2>
 				<div className='grid grid-cols-2 gap-5 md:grid-cols-6 py-10'>
 					{shuffledCategories.map((cat, i) => {

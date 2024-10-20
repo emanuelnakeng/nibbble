@@ -3,16 +3,16 @@ import { BsGlobeCentralSouthAsia } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 function Recipe() {
 	return (
-		<Link className='border border-border-clr rounded-2xl'>
+		<Link className='border border-border-clr rounded-3xl'>
 			<img
 				src={
 					'https://images.unsplash.com/photo-1432139555190-58524dae6a55?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 				}
 				alt=''
-				className='w-full h-72 object-cover rounded-t-2xl'
+				className='w-full h-72 object-cover rounded-t-3xl'
 			/>
-			<div className='p-5 flex flex-col gap-3 break-all '>
-				<h3 className='font-bold text-dark-clr leading-snug'>
+			<div className='p-5 flex flex-col gap-3 bg-white rounded-b-3xl'>
+				<h3 className='font-bold text-dark-clr leading-relaxed'>
 					Mala modogu and rices and rice and rice and more rice
 				</h3>
 				<div className='flex justify-between'>

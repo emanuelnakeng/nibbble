@@ -6,7 +6,7 @@ function Categories() {
 	return (
 		<ScreenContainer>
 			<section className='container mx-auto pt-5 w-full px-5'>
-				<h2 className='font-bold text-3xl md:tex-3xl text-dark-clr'>
+				<h2 className='font-bold text-2xl md:tex-3xl text-dark-clr'>
 					Categories
 				</h2>
 				<div className='grid grid-cols-2 gap-5 md:grid-cols-6 py-10'>

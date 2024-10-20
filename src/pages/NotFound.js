@@ -5,9 +5,9 @@ function NotFound() {
 	return (
 		<ScreenContainer>
 			<section className='container mx-auto flex flex-col items-center justify-center w-screen h-[75vh] gap-5 px-5'>
-				<h1 className='text-4xl md:text-5xl text-dark-clr font-bold text-center'>
+				<h2 className='font-bold text-3xl md:tex-4xl text-dark-clr text-center'>
 					Lost in space...404
-				</h1>
+				</h2>
 				<h3 className='text-sm text-dark-clr font-semibold'>
 					Page was not found
 				</h3>

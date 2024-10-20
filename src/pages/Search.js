@@ -5,7 +5,7 @@ function Search() {
 	return (
 		<ScreenContainer>
 			<section
-				className={`h-[40vh] w-full container mx-auto rounded-3xl bg-[#FF9A78] bg-center md:bg-bottom bg-contain md:bg-cover md:h-[40vh] bg-no-repeat mb-15`}
+				className={`h-[40vh] w-full container mx-auto rounded-3xl bg-[#FF9A78] bg-center bg-contain md:h-[40vh] bg-no-repeat mb-15`}
 				style={{
 					backgroundImage: `url(${background})`,
 				}}

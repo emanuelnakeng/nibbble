@@ -1,31 +1,19 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ScreenContainer from '../components/common/ScreenContainer';
 import { HiOutlineArrowTrendingUp } from 'react-icons/hi2';
-import Recipe from '../components/ui/Recipe';
 import { categories, heroImages } from '../utils/data';
 import Category from '../components/ui/Category';
 import Button from '../components/common/Button';
-import { getRandomArrayItems, checkRandomNumber } from '../utils/helpers';
+import { getRandomArrayItems } from '../utils/helpers';
 
 function Home() {
 	const [index, setIndex] = useState(0);
-	const shuffledCategories = useMemo(
-		() => getRandomArrayItems(categories, 6),
-		[]
-	);
+	const shuffledCategories = getRandomArrayItems(categories, 6);
 
 	useEffect(() => {
-		const autoplay = setInterval(() => {
-			let randomNum = Math.floor(Math.random() * heroImages.length);
-			if (randomNum === index) {
-				randomNum = index + 1;
-			}
-			setIndex(checkRandomNumber(heroImages, randomNum));
-		}, 5000);
-		return () => {
-			clearInterval(autoplay);
-		};
-	}, [index]);
+		let randomNum = Math.floor(Math.random() * heroImages.length);
+		setIndex(randomNum);
+	}, []);
 
 	return (
 		<ScreenContainer>
@@ -51,7 +39,7 @@ function Home() {
 				<h2 className='font-bold text-2xl md:tex-3xl text-dark-clr'>
 					Popular Categories
 				</h2>
-				<div className='grid grid-cols-2 gap-5 md:grid-cols-6 py-10'>
+				<div className='grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6 py-10'>
 					{shuffledCategories.map((cat, i) => {
 						return (
 							<Category
@@ -63,18 +51,7 @@ function Home() {
 					})}
 				</div>
 			</section>
-			{/* Section must only be visible when exists */}
-			<section className='container mx-auto pt-12 w-full'>
-				<h2 className='font-bold text-2xl md:tex-3xl text-dark-clr'>
-					Recently viewed
-				</h2>
-				<div className='grid grid-cols-1 gap-5 md:grid-cols-4 md:gap-10 py-10 '>
-					<Recipe />
-					<Recipe />
-					<Recipe />
-					<Recipe />
-				</div>
-			</section>
+			{/* <RecentlyViewed /> */}
 			<section className='bg-accent-clr-light container mx-auto rounded-3xl flex flex-col h-[28rem] items-center justify-center gap-5 px-3 mt-12 '>
 				<h2 className='text-3xl md:text-4xl font-bold text-dark-clr text-center'>
 					Unlock a world of deliciousness
@@ -83,15 +60,12 @@ function Home() {
 					Find great recipes and start creating mouthwatering meals
 					today
 				</p>
-				<Button styles='bg-white text-dark-clr hover:bg-accent-clr hover:text-white'>
-					Discover
-				</Button>
-				{/* <Link
+				<Button
+					styles='bg-white text-dark-clr hover:bg-accent-clr hover:text-white'
 					to='/search'
-					className={`bg-white py-3 px-6 rounded-full text-dark-clr font-semibold text-sm`}
 				>
 					Discover
-				</Link> */}
+				</Button>
 			</section>
 		</ScreenContainer>
 	);

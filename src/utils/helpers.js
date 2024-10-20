@@ -1,7 +1,5 @@
 const getRandomArrayItems = (arr, items) => {
 	const shuffled = arr.sort(() => 0.5 - Math.random());
-	console.log(shuffled);
-
 	return shuffled.slice(0, items);
 };
 

@@ -1,28 +1,34 @@
-import { RiTimerLine } from 'react-icons/ri';
-import { BsGlobeCentralSouthAsia } from 'react-icons/bs';
+import { GiKnifeFork } from 'react-icons/gi';
+import { PiGlobeHemisphereEastBold } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
-function Recipe() {
+function Recipe({ id, image, mealName, category, cuisine }) {
 	return (
-		<Link className='border border-border-clr rounded-3xl'>
+		<Link
+			className='border border-border-clr rounded-3xl'
+			to={`/recipe/${id}`}
+			key={id}
+		>
 			<img
-				src={
-					'https://images.unsplash.com/photo-1432139555190-58524dae6a55?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-				}
-				alt=''
+				src={image}
+				alt={mealName}
 				className='w-full h-72 object-cover rounded-t-3xl'
 			/>
 			<div className='p-5 flex flex-col gap-3 bg-white rounded-b-3xl'>
 				<h3 className='font-bold text-dark-clr leading-relaxed'>
-					Mala modogu and rices and rice and rice and more rice
+					{mealName}
 				</h3>
 				<div className='flex justify-between'>
 					<div className='flex items-center gap-2'>
-						<RiTimerLine size={14} color='#7f7f7f' />
-						<p className='text-sm text-text-light'>5 mins</p>
+						<PiGlobeHemisphereEastBold size={14} color='#7f7f7f' />
+						<p className='text-sm text-text-light capitalize'>
+							{category}
+						</p>
 					</div>
 					<div className='flex items-center gap-2'>
-						<BsGlobeCentralSouthAsia size={14} color='#7f7f7f' />
-						<p className='text-sm text-text-light'>Chinese</p>
+						<GiKnifeFork size={14} color='#7f7f7f' />
+						<p className='text-sm text-text-light capitalize'>
+							{cuisine}
+						</p>
 					</div>
 				</div>
 			</div>

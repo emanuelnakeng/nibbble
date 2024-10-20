@@ -1,7 +1,34 @@
-import Recipe from '../components/ui/Recipe';
 import ScreenContainer from '../components/common/ScreenContainer';
 import background from '../assets/background.png';
+import SearchResults from '../components/ui/SearchResults';
+import { useState } from 'react';
+
 function Search() {
+	const [isSearching, setIsSearching] = useState(false);
+	const [isError, setIsError] = useState(false);
+	const [query, setQuery] = useState('');
+	const [results, setResults] = useState([]);
+
+	const onSearchHandler = async e => {
+		e.preventDefault();
+		const enteredQuery = query.trim();
+		if (enteredQuery.length > 1) {
+			try {
+				setIsSearching(true);
+				const response = await fetch(
+					`https://www.themealdb.com/api/json/v1/1/search.php?s=${enteredQuery}`
+				);
+				const results = await response.json();
+				setResults(results.meals);
+				setIsSearching(false);
+				setIsError(false);
+			} catch (error) {
+				setIsError(true);
+			}
+		}
+		return;
+	};
+
 	return (
 		<ScreenContainer>
 			<section
@@ -32,9 +59,9 @@ function Search() {
 									>
 										<path
 											stroke='currentColor'
-											stroke-linecap='round'
-											stroke-linejoin='round'
-											stroke-width='2'
+											strokeLinecap='round'
+											strokeLinejoin='round'
+											strokeWidth='2'
 											d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
 										/>
 									</svg>
@@ -42,13 +69,28 @@ function Search() {
 								<input
 									type='search'
 									id='default-search'
-									className='block w-full p-4 ps-10 text-sm text-dark-clr border border-border-clr rounded-3xl bg-white focus:outline-0'
+									className={`block w-full p-4 ps-10 text-sm text-dark-clr border border-border-clr rounded-3xl bg-white focus:outline-0`}
 									placeholder='Find recipes, cocktails and more...'
 									required
+									onChange={e => {
+										setQuery(e.target.value);
+									}}
+									value={query}
 								/>
 								<button
 									type='submit'
-									className='text-white absolute end-2.5 bottom-2.5 bg-accent-clr-light hover:bg-accent-clr focus:ring-4 focus:outline-none focus:ring-accent-clr font-medium rounded-3xl text-sm px-4 py-2'
+									className={`text-white absolute end-2.5 bottom-2.5 bg-accent-clr-light ${
+										query.length > 1
+											? 'hover:bg-accent-clr'
+											: ''
+									}  ${
+										query.length > 1 ? 'focus:ring-2' : ''
+									}  ${
+										query.length > 1
+											? 'focus:ring-accent-clr'
+											: ''
+									} focus:outline-none  font-medium rounded-3xl text-sm px-4 py-2`}
+									onClick={onSearchHandler}
 								>
 									Search
 								</button>
@@ -57,28 +99,12 @@ function Search() {
 					</div>
 				</div>
 			</section>
-			<section className='container mx-auto pt-12 w-full'>
-				<h2 className='font-bold text-2xl md:tex-3xl text-dark-clr'>
-					Search results
-				</h2>
-				<div className='grid grid-cols-1 gap-5 md:grid-cols-4 md:gap-10 py-10 '>
-					<Recipe />
-					<Recipe />
-					<Recipe />
-					<Recipe />
-				</div>
-			</section>
-			<section className='container mx-auto pt-12 w-full'>
-				<h2 className='font-bold text-2xl md:tex-3xl text-dark-clr'>
-					Recently viewed
-				</h2>
-				<div className='grid grid-cols-1 gap-5 md:grid-cols-4 md:gap-10 py-10 '>
-					<Recipe />
-					<Recipe />
-					<Recipe />
-					<Recipe />
-				</div>
-			</section>
+			<SearchResults
+				isError={isError}
+				isSearching={isSearching}
+				results={results}
+			/>
+			{/* <RecentlyViewed /> */}
 		</ScreenContainer>
 	);
 }

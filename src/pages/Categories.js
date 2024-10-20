@@ -9,11 +9,11 @@ function Categories() {
 				<h2 className='font-bold text-2xl md:tex-3xl text-dark-clr'>
 					Categories
 				</h2>
-				<div className='grid grid-cols-2 gap-5 md:grid-cols-6 py-10'>
+				<div className='grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6 py-10'>
 					{categories.map((cat, i) => {
 						return (
 							<Category
-								key={i + '_'}
+								key={i + '__'}
 								catName={cat.name}
 								image={cat.imageURI}
 							/>

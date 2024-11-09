@@ -1,5 +1,7 @@
 # Nibbble Project Report and Reflection
 
+Check out the [Nibbble App](https://nibbbleapp.netlify.app/)!
+
 ## 1. Introduction
 
 The **Nibbble Project** aimed to develop a recipe web app using **React.js** and the **Free Meal API**. This project provided hands-on experience with React fundamentals, component-based architecture, and practical API integration. The app allows users to search for recipes, view detailed meal information, and discover new meals. This report outlines the development process, challenges encountered, and reflections on what I learned.

@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Nibbble Project Report and Reflection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Introduction
 
-## Available Scripts
+The **Nibbble Project** aimed to develop a recipe web app using **React.js** and the **Free Meal API**. This project provided hands-on experience with React fundamentals, component-based architecture, and practical API integration. The app allows users to search for recipes, view detailed meal information, and discover new meals. This report outlines the development process, challenges encountered, and reflections on what I learned.
 
-In the project directory, you can run:
+## 2. Project Overview
 
-### `npm start`
+The app provides a user-friendly interface with the following features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Search for Recipes**: Users can search for recipes by name or ingredient.
+- **View Recipe Details**: Detailed information for each recipe, including ingredients, instructions, and videos where available.
+- **Navigation with React Router**: Allows seamless navigation between search results and meal details.
+- **Favorites and Recent Recipes**: Users can save favorite recipes and view recently viewed recipes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Tech Stack
+- **Figma**: Used for wireframes and UI prototyping.
+- **React.js**: The core library for building the app’s frontend.
+- **Fetch API**: For making requests to the Free Meal API.
+- **TailwindCSS**: Used for styling and layout.
+- **React Router DOM**: Manages multi-page navigation within the app.
 
-### `npm test`
+## 3. Features Implemented
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Search Functionality**  
+  Users can type a meal name or ingredient into the search bar, and the app retrieves matching recipes.
 
-### `npm run build`
+- **Meal Details Page**  
+  Selected recipes display details like ingredients, cooking instructions, and an image.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Responsive Design**  
+  The app is designed to be responsive, working well on both desktop and mobile devices, using CSS Grid and Flexbox.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 4. Challenges and Frustrations
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Throughout development, I faced several technical and conceptual challenges. Here are some of the major issues and the solutions I implemented:
 
-### `npm run eject`
+### 1. Limitations of the Free Meal API
+   - **Problem**: The Free Meal API has a limited selection of meals, which often led to incomplete search results or missing data, such as cooking videos or detailed instructions.
+   - **Solution**: I added error handling to inform users when no results were found or when meal data was incomplete, improving user experience and reducing potential confusion.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Handling Asynchronous API Requests
+   - **Problem**: Asynchronous API requests posed a challenge, especially when trying to manage data loading states and UI updates. At times, the app displayed old or incomplete data while waiting for new data.
+   - **Solution**: Implemented loading states in React to show a "Loading..." message whenever the app was fetching data, ensuring users knew data was still being retrieved.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. React Router Integration
+   - **Problem**: Setting up React Router for multi-page navigation was initially challenging, especially when trying to pass data between routes (e.g., recipe details from the search page to the meal details page).
+   - **Solution**: After researching and experimenting, I learned how to use URL parameters to pass data between routes, enabling seamless navigation and accurate rendering of the meal details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 5. Conclusion
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Reflecting on this project, I’ve gained valuable skills and insights in both technical aspects and problem-solving:
 
-## Learn More
+- **React Fundamentals**  
+  My understanding of core React concepts like components, props, and state management has significantly improved. Using hooks like `useState` and `useEffect` in real-world scenarios helped solidify these concepts, and structuring the app with reusable components has given me confidence in building complex UIs.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React Router and Data Flow**  
+  Managing data flow between components and routes was challenging but rewarding. I gained a clearer understanding of multi-page applications and how to pass data between pages effectively.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Responsive Design**  
+  Though the app design is simple, using Flexbox and CSS Grid taught me the basics of responsive design, ensuring a seamless experience on both desktop and mobile devices.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Overall, the **Nibbble Project** has deepened my knowledge of React and front-end development. This experience has motivated me to explore more advanced projects and continue refining my skills in building functional, user-centered applications.
